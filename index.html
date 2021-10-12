@@ -496,7 +496,7 @@ article.format-audio .mejs-horizontal-volume-current {
 												CAKE'S EN BUTTERCREAM
 											</h5>
 											<p class="edgtf-iwt-text" style="color: #666666;margin-top: 23px">
-												Los Cakes buttercream tienen diseños modernos para cualquier ocasión y usamos nuestra receta especial de buttercream italiano para elaborar cada pedido. Esta colección tiene opciones de 8, 10 y 15 porciones.
+												Los Cakes buttercream tienen diseños modernos para cualquier ocasión y usamos nuestra receta especial de buttercream italiano para elaborar cada pedido. Esta colección tiene opciones de 8 y 14 porciones.
 											</p>
 										</div>
 									</div>
@@ -595,19 +595,15 @@ article.format-audio .mejs-horizontal-volume-current {
 																						<div class="dropdown">
 																							<div class="input-group-btn" id="porcionesB" style="display:none">
 																								<button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-																									Porciones <span class="selected"></span>
+																									Porciones<span class="selected"></span>
 																								</button>
 																								<ul class="dropdown-menu" id="porcionesBCalc" aria-labelledby="dropdownMenuButton3">
 																									<li><a class="dropdown-item">8 Porciones
 																										<label><img src="wp-content/uploads/hm/hm-12diametroCy.jpg" width="150"/></label>
 																									</a>
 																									</li>
-																									<li><a class="dropdown-item">10 Porciones
+																									<li><a class="dropdown-item">14 Porciones
 																										<label><img src="wp-content/uploads/hm/hm-14diametroCy.jpg" width="140"/></label>
-																									</a>
-																									</li>
-																									<li><a class="dropdown-item">15 Porciones
-																										<label><img src="wp-content/uploads/hm/hm-16diametroCy.jpg" width="140"/></label>
 																									</a>
 																									</li>
 																								</ul>
@@ -640,15 +636,19 @@ article.format-audio .mejs-horizontal-volume-current {
 																						<div class="dropdown">
 																							<div class="input-group-btn" id="estilo" style="display:none">
 																								<button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-																									Elige un Estilo <span class="selected"></span>
+																									Elige el Estilo <span class="selected"></span>
 																								</button>
 																								<ul class="dropdown-menu" id="estiloCalc"aria-labelledby="dropdownMenuButton1">
-																									<li><a class="dropdown-item">Cúbica
-																										<label><img src="wp-content/uploads/hm/hm-cube.jpg" width="150"/></label>
+																									<li><a class="dropdown-item">Circular 20
+																										<label><img src="wp-content/uploads/hm/hm-cylinder.jpg" width="150"/></label>
 																									</a>
 																									</li>
-																									<li><a class="dropdown-item">Circular
-																										<label><img src="wp-content/uploads/hm/hm-cylinder.jpg" width="150"/></label>
+																									<li><a class="dropdown-item">Cúbica 20
+																										<label><img src="wp-content/uploads/hm/hm-cube20.jpg" width="150"/></label>
+																									</a>
+																									</li>
+																									<li><a class="dropdown-item">Cúbica 30
+																										<label><img src="wp-content/uploads/hm/hm-cube30.jpg" width="150"/></label>
 																									</a>
 																									</li>
 																								</ul>
@@ -941,8 +941,8 @@ article.format-audio .mejs-horizontal-volume-current {
 			var butter = item.children[0].children[2].checked;
 			document.querySelector('#dropdownMenuButton4').innerHTML = 'Elige un Diseño';
 			document.querySelector('#dropdownMenuButton2').innerHTML = 'Elige un Diseño';
-			document.querySelector('#dropdownMenuButton1').innerHTML = 'Elige un Estilo';
-			document.querySelector('#dropdownMenuButton3').innerHTML = 'Porciones';
+			document.querySelector('#dropdownMenuButton1').innerHTML = 'Elige el Estilo';
+			document.querySelector('#dropdownMenuButton3').innerHTML = 'Elige las Porciones';
 			if(luxury == true){
 				document.getElementById("estilo").style.display="block";
 				document.getElementById("diseno").style.display="block";
@@ -972,21 +972,15 @@ article.format-audio .mejs-horizontal-volume-current {
 			disenoB = $(this).text();
 			if(porcionesB.includes("8")){
 				if (disenoB.includes("Catálogo")) {
-					document.getElementById('total').innerHTML = "Desde S/.115.0";
-				} else if (disenoB.includes("Personalizado")) {
 					document.getElementById('total').innerHTML = "Desde S/.125.0";
-				}
-			}if(porcionesB.includes("10")){
-				if (disenoB.includes("Catálogo")) {
+				} else if (disenoB.includes("Personalizado")) {
 					document.getElementById('total').innerHTML = "Desde S/.145.0";
-				} else if (disenoB.includes("Personalizado")) {
-					document.getElementById('total').innerHTML = "Desde S/.165.0";
 				}
-			}if(porcionesB.includes("15")){
+			}if(porcionesB.includes("14")){
 				if (disenoB.includes("Catálogo")) {
-					document.getElementById('total').innerHTML = "Desde S/.190.0";
+					document.getElementById('total').innerHTML = "Desde S/.155.0";
 				} else if (disenoB.includes("Personalizado")) {
-					document.getElementById('total').innerHTML = "Desde S/.210.0";
+					document.getElementById('total').innerHTML = "Desde S/.175.0";
 				}
 			}
 		});
@@ -1001,17 +995,23 @@ article.format-audio .mejs-horizontal-volume-current {
 		}
 		$('#disenoCalc li a').on('click', function () {
 			diseno = $(this).text();
-			if(estilo.includes("Circular")) {
+			if(estilo.includes("Circular 20")) {
 				if (diseno.includes("Catálogo")) {
-					document.getElementById('total').innerHTML = "Desde S/.230.0";
+					document.getElementById('total').innerHTML = "Desde S/.220.0";
 				} else if (diseno.includes("Personalizado")) {
-					document.getElementById('total').innerHTML = "Desde S/.250.0";
+					document.getElementById('total').innerHTML = "Desde S/.240.0";
 				}
-			}else if(estilo.includes("Cúbica")) {
+			}else if(estilo.includes("Cúbica 20")) {
 				if (diseno.includes("Catálogo")) {
 					document.getElementById('total').innerHTML = "Desde S/.280.0";
 				} else if (diseno.includes("Personalizado")) {
-					document.getElementById('total').innerHTML = "Desde S/.310.0";
+					document.getElementById('total').innerHTML = "Desde S/.300.0";
+				}
+			}else if(estilo.includes("Cúbica 30")) {
+				if (diseno.includes("Catálogo")) {
+					document.getElementById('total').innerHTML = "Desde S/.320.0";
+				} else if (diseno.includes("Personalizado")) {
+					document.getElementById('total').innerHTML = "Desde S/.340.0";
 				}
 			}
 		});
